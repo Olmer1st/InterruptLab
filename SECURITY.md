@@ -5,11 +5,10 @@ cooperative JavaScript/TypeScript drivers on the tested runtime (Node 22.22.3, L
 Do not use it for production payments or confidential records.
 
 ## Reporting
-Security reports are intended to use GitHub private vulnerability reporting.
-Configuration is **PENDING_ADMIN_ACTION**: the current authenticated GitHub account
-cannot enable the feature. A repository administrator must enable it before the
-private reporting link becomes usable. Do not submit sensitive security details in
-public issues. No reporting email address or response deadline is provided.
+GitHub private vulnerability reporting is **ENABLED** and verified through the repository API.
+Use [Report a vulnerability](https://github.com/Olmer1st/InterruptLab/security/advisories/new)
+to send security details privately. Do not submit sensitive security details in public
+issues. No reporting email address or response deadline is provided.
 
 GitHub notification delivery is controlled by the maintainer's personal GitHub settings;
 this project does not request email reports.

@@ -5,7 +5,7 @@ npm run lint, npm test, npm run demo and npm run pack:check at the repository ro
 Discuss large features before implementation. For bugs, provide a minimal synthetic
 scenario, expected versus observed rules, Node/OS versions and event sequences.
 Never include credentials, personal data or raw confidential traces. See SECURITY.md;
-GitHub private security reporting requires administrator enablement.
+use the GitHub private vulnerability reporting link in SECURITY.md.
 
 Use strict TypeScript and ESM. Reuse existing schema, store, recorder, assertion and
 report utilities. Tests must cover a failure path, a passing control and missing

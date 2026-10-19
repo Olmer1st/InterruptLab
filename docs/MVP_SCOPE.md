@@ -88,6 +88,6 @@ outside the MVP. Framework adapters must preserve explicit observation limits.
 ## Community and release
 Keep a working README, contribution guide, support boundaries, conduct policy, security
 policy, issue/PR templates, roadmap and changelog. Use the approved Apache-2.0 license. The GitHub source preview is authorized; npm
-publication remains deferred. GitHub private security reporting needs administrator
-enablement, and private conduct reporting is deferred.
+publication remains deferred. GitHub private security reporting is enabled and
+verified; private conduct reporting is deferred.
 Keep local engineering progress separate from these publication decisions.

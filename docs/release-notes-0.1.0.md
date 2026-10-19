@@ -13,6 +13,5 @@ contracts. Cancellation never implies remote rollback or universal process stopp
 Read docs/limitations.md before adapting real application code.
 
 These are candidate notes for a GitHub source preview under Apache-2.0. Linux is tested;
-macOS and Windows are untested. GitHub private security reporting requires administrator
-enablement. Private conduct reporting and npm publication are deferred. Onboarding trials
+macOS and Windows are untested. GitHub private security reporting is enabled and verified. Private conduct reporting and npm publication are deferred. Onboarding trials
 remain unverified; no supported versioned release or npm publication is claimed.

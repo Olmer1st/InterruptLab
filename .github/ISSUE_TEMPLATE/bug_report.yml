@@ -3,7 +3,7 @@ description: Report a reproducible workflow regression or harness defect.
 body:
   - type: markdown
     attributes:
-      value: "Do not post credentials, personal data or security vulnerability details. See SECURITY.md; GitHub private security reporting needs administrator enablement."
+      value: "Do not post credentials, personal data or security vulnerability details. See SECURITY.md; Use the private GitHub reporting link in SECURITY.md."
   - type: input
     id: environment
     attributes:

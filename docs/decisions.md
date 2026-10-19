@@ -65,5 +65,5 @@
 ## GitHub preview decisions
 - Linux is the tested platform; macOS and Windows remain untested.
 - Use GitHub private vulnerability reporting without an email reporting address or
-  response deadline. Enabling the feature needs repository administrator access.
+  response deadline. The feature is enabled and verified through the repository API.
 - Defer private conduct-reporting intake; document that no such channel is available.

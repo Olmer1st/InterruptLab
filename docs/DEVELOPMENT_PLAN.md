@@ -59,7 +59,7 @@ requirements in their project documents.
 
 ## Release sequence
 The maintainer approved personal ownership, Apache-2.0 and a GitHub-only source preview.
-Enable GitHub private security reporting through a repository administrator. Before a
+GitHub private security reporting is enabled and verified. Before a
 supported versioned release, obtain platform/onboarding evidence and rerun
 install/build/typecheck/lint/tests/demo and packaging checks.
 Review the distributable, dependency notices, privacy behavior and release notes.

@@ -11,7 +11,7 @@
   packaging/type smoke, release documentation and scoped secret/license review.
 
 ## GitHub preview follow-up
-- Enable GitHub private vulnerability reporting using a repository administrator account.
+- Keep the enabled GitHub private vulnerability reporting route documented and usable.
 - Private conduct reporting is deferred; no email reporting channel is planned.
 - Run hosted CI on Linux and macOS; macOS remains untested locally.
 - Obtain two unfamiliar-developer integration trials; no pilot results are claimed.

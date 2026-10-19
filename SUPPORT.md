@@ -4,7 +4,7 @@ continuous availability or enterprise service is promised.
 Use the configured GitHub repository's issues for ordinary bugs and feature proposals
 when that repository is available. Include version, OS, Node version and a minimal
 synthetic reproduction. Do not post secrets, private traces or security details.
-Private security reporting through GitHub requires administrator enablement; see SECURITY.md.
+Private security reporting is enabled through GitHub; see SECURITY.md.
 No private conduct-reporting channel is offered for this preview. No email reports are
 requested. See CODE_OF_CONDUCT.md.
 

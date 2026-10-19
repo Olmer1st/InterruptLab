@@ -25,13 +25,12 @@ with Node 22.22.3 / npm 11.12.1. See [testing](testing.md) for evidence and limi
 - Personal ownership confirmed; Apache-2.0 approved with Copyright 2026 Vadim Malkin.
 - GitHub commit and push authorized by the maintainer; npm publication deferred.
 - Linux tested. macOS and Windows explicitly untested.
-- GitHub private vulnerability reporting selected; enabling it is PENDING_ADMIN_ACTION.
-  The current authenticated account has read-only repository permissions.
+- GitHub private vulnerability reporting is enabled and verified through the repository API.
 - No private conduct-reporting channel or email intake is offered for this preview.
 - External onboarding trials remain unverified and are a documented preview limitation.
 
 Supported versioned release readiness remains pending platform/onboarding evidence,
-security-reporting enablement and a fresh package/privacy review. These are separate
+a fresh package/privacy review. These are separate
 from the authorized GitHub source preview. No npm publication is authorized.
 
 ## Owner-controlled release sequence
