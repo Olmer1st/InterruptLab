@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a reproducible workflow regression or harness defect.
+body:
+  - type: markdown
+    attributes:
+      value: "Do not post credentials, personal data or security vulnerability details. See SECURITY.md; GitHub private security reporting needs administrator enablement."
+  - type: input
+    id: environment
+    attributes:
+      label: InterruptLab version, Node version and OS
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal synthetic scenario and reproduction command
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected versus observed result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized rule evidence and event sequences

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "effects/missing-observer",
+  "driver": "missing-observer",
+  "fixture": "sqlite",
+  "seed": 42,
+  "timeoutMs": 2000,
+  "stepTimeoutMs": 1000,
+  "resume": {
+    "enabled": false
+  },
+  "assertions": [
+    {
+      "type": "effect_count",
+      "operation": "create-invoice",
+      "groupBy": "idempotencyKey",
+      "exactly": 1,
+      "key": "demo-42"
+    },
+    {
+      "type": "observation_required",
+      "observer": "fixture-snapshot"
+    },
+    {
+      "type": "observed_terminal_state",
+      "anyOf": [
+        "completed",
+        "canceled"
+      ]
+    }
+  ],
+  "redact": []
+}

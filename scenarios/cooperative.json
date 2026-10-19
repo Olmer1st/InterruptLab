@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "cancel/cooperative",
+  "driver": "cooperative",
+  "fixture": "sqlite",
+  "seed": 42,
+  "timeoutMs": 2000,
+  "stepTimeoutMs": 1000,
+  "cancel": {
+    "at": "after-step-start",
+    "operation": "slow-read",
+    "occurrence": 1,
+    "graceMs": 500
+  },
+  "resume": {
+    "enabled": false
+  },
+  "assertions": [
+    {
+      "type": "cancel_propagated"
+    },
+    {
+      "type": "observed_terminal_state",
+      "anyOf": [
+        "completed",
+        "canceled"
+      ]
+    },
+    {
+      "type": "observation_required",
+      "observer": "fixture-snapshot"
+    }
+  ],
+  "redact": []
+}

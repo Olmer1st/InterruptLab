@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "resume/approval",
+  "driver": "approval",
+  "fixture": "sqlite",
+  "seed": 42,
+  "timeoutMs": 2000,
+  "stepTimeoutMs": 1000,
+  "resume": {
+    "enabled": true
+  },
+  "assertions": [
+    {
+      "type": "effect_count",
+      "operation": "create-invoice",
+      "groupBy": "idempotencyKey",
+      "exactly": 1,
+      "key": "demo-42"
+    },
+    {
+      "type": "observation_required",
+      "observer": "fixture-snapshot"
+    },
+    {
+      "type": "observed_terminal_state",
+      "anyOf": [
+        "completed",
+        "canceled"
+      ]
+    },
+    {
+      "type": "resume_checkpoint_consistency"
+    }
+  ],
+  "redact": []
+}

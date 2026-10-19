@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "effects/late-commit",
+  "driver": "late-commit",
+  "fixture": "sqlite",
+  "seed": 42,
+  "timeoutMs": 2000,
+  "stepTimeoutMs": 1000,
+  "cancel": {
+    "at": "before-effect-commit",
+    "operation": "create-invoice",
+    "occurrence": 1,
+    "graceMs": 500
+  },
+  "resume": {
+    "enabled": false
+  },
+  "assertions": [
+    {
+      "type": "no_forbidden_commit_after",
+      "barrier": "cancel_acknowledged"
+    },
+    {
+      "type": "cancel_propagated"
+    },
+    {
+      "type": "observation_required",
+      "observer": "fixture-snapshot"
+    },
+    {
+      "type": "observed_terminal_state",
+      "anyOf": [
+        "completed",
+        "canceled"
+      ]
+    }
+  ],
+  "redact": []
+}

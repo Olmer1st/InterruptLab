@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "driver/error",
+  "driver": "driver-error",
+  "fixture": "sqlite",
+  "seed": 42,
+  "timeoutMs": 2000,
+  "stepTimeoutMs": 1000,
+  "resume": {
+    "enabled": false
+  },
+  "assertions": [
+    {
+      "type": "observed_terminal_state",
+      "anyOf": [
+        "completed",
+        "canceled"
+      ]
+    }
+  ],
+  "redact": []
+}

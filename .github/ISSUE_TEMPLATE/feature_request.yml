@@ -1,0 +1,13 @@
+name: Feature request
+description: Explain a concrete cancellation or recovery testing need.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Workflow problem and desired observable behavior
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Existing tools, alternatives and smallest useful change

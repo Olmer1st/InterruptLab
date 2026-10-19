@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.interruptlab/
+.env
+.env.*
+!.env.example
+*.log
+coverage/
+*.tgz

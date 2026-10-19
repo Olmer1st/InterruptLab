@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "cancel/noncooperative",
+  "driver": "noncooperative",
+  "fixture": "sqlite",
+  "seed": 42,
+  "timeoutMs": 2000,
+  "stepTimeoutMs": 1000,
+  "cancel": {
+    "at": "after-step-start",
+    "operation": "slow-read",
+    "occurrence": 1,
+    "graceMs": 30
+  },
+  "resume": {
+    "enabled": false
+  },
+  "assertions": [
+    {
+      "type": "cancel_propagated"
+    },
+    {
+      "type": "observed_terminal_state",
+      "anyOf": [
+        "completed",
+        "canceled"
+      ]
+    }
+  ],
+  "redact": []
+}

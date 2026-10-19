@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "resume/invoice-fixed",
+  "driver": "invoice-fixed",
+  "fixture": "sqlite",
+  "seed": 42,
+  "timeoutMs": 2000,
+  "stepTimeoutMs": 1000,
+  "cancel": {
+    "at": "after-effect-commit-before-response",
+    "operation": "create-invoice",
+    "occurrence": 1,
+    "graceMs": 500
+  },
+  "resume": {
+    "enabled": true
+  },
+  "assertions": [
+    {
+      "type": "effect_count",
+      "operation": "create-invoice",
+      "groupBy": "idempotencyKey",
+      "exactly": 1,
+      "key": "demo-42"
+    },
+    {
+      "type": "observation_required",
+      "observer": "fixture-snapshot"
+    },
+    {
+      "type": "observed_terminal_state",
+      "anyOf": [
+        "completed",
+        "canceled"
+      ]
+    },
+    {
+      "type": "resume_checkpoint_consistency"
+    }
+  ],
+  "redact": []
+}

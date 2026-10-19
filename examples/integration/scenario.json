@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "integration/existing-workflow",
+  "entry": "./driver.mjs",
+  "resume": { "enabled": true },
+  "assertions": [
+    { "type": "effect_count", "operation": "create-invoice", "groupBy": "idempotencyKey", "key": "example-order-42", "exactly": 1 },
+    { "type": "observation_required", "observer": "fixture-snapshot" },
+    { "type": "observed_terminal_state", "anyOf": ["completed"] },
+    { "type": "resume_checkpoint_consistency" }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "name": "interruptlab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": "22.22.3"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "npm run build && vitest run",
+    "demo": "node dist/runtime/cli.js demo",
+    "pack:check": "node scripts/package-smoke.mjs",
+    "security:scan": "node scripts/security-scan.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.7",
+    "esbuild": "0.28.2",
+    "eslint": "10.0.3",
+    "fast-xml-parser": "5.11.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.57.1",
+    "vitest": "4.1.11"
+  },
+  "dependencies": {
+    "yaml": "2.9.1",
+    "zod": "4.6.7"
+  },
+  "description": "Deterministic local cancellation and resume regression tests for TypeScript workflows",
+  "bin": {
+    "interruptlab": "dist/runtime/cli.js"
+  },
+  "files": [
+    "dist/runtime",
+    "dist/packages",
+    "README.md",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "SUPPORT.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "docs",
+    "scenarios",
+    "examples/integration",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/packages/core/src/index.d.ts",
+      "import": "./dist/runtime/core.js"
+    },
+    "./fixtures": {
+      "types": "./dist/packages/fixtures/src/index.d.ts",
+      "import": "./dist/runtime/fixtures.js"
+    },
+    "./driver-node": {
+      "types": "./dist/packages/driver-node/src/index.d.ts",
+      "import": "./dist/runtime/driver-node.js"
+    },
+    "./reporter": {
+      "types": "./dist/packages/reporter/src/index.d.ts",
+      "import": "./dist/runtime/reporter.js"
+    }
+  }
+}
